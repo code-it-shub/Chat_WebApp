@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@800&family=Press+Start+2P&display=swap');
+
+@mixin mobile {
+    @media screen and (max-width: 480px) {
+      @content;
+    }
+  }
+  @mixin tablet {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @mixin laptop {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+.formContainer{
+    background-color: rgb(97, 185, 253);
+    margin:0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mobile{
+        padding: 60px 30px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    >.formWrapperReg{
+        color:  rgb(52, 163, 248);
+        background-color: white;
+        padding:20px 60px;
+        border-radius: 10px;
+        width: 20vw;
+        display: flex;
+        flex-direction: column;
+        gap:18px;
+        justify-content: center;
+        align-items: center;
+        @include mobile{
+            width: 50vw;
+            height: 42vh;
+            padding:55px 60px;
+            gap: 10px;
+            align-items: center;
+            >p{
+                display: flex;
+                width: 120%;
+                font-size: small;
+                margin:10px auto;
+            }
+
+        }
+        span{
+            font-family:'Inter', sans-serif;
+        }
+        input{
+            width: 20vw;
+            padding-left: 1vmax;
+            height: 4vh;
+            border: none;
+            border-bottom: 1px solid rgb(160, 159, 159);
+            outline: none;
+            margin: 10px;
+            @include mobile{
+                width: 50vw;
+
+            }
+        }
+        .logo{
+            font-weight: 2rem;
+        }
+        #files{
+            width: 1vw;
+        }
+        button{
+            width: 15vw;
+            padding: 1.2vh;
+            margin: 2vmax 4vmax;
+            border: none;
+            background-color:rgb(52, 163, 248); 
+            border-radius: 5px;
+            color: white;
+            @include mobile{
+                width: 40vw;
+            
+            }
+            cursor: pointer;
+            font-family:'Lexend Deca', sans-serif;
+            transition-duration: .2s;
+            &:hover{
+                transform: scale(1.1);
+                background-color:rgb(0, 119, 210);
+            }
+        }
+        label{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 20px;
+            transition-duration: .8s;
+            cursor: pointer;
+            >img{
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+    >.formWrapperLogin{
+        color:  rgb(52, 163, 248);
+        background-color: white;
+        padding:20px 60px;
+        border-radius: 10px;
+        width: 20vw;
+        display: flex;
+        flex-direction: column;
+        gap:18px;
+        justify-content: center;
+        align-items: center;
+        @include mobile{
+            width: 50vw;
+            height:30vh;
+            padding: 50px;
+            gap: 14px;
+            >p{
+                width: 90vw;
+                font-size: small;
+                margin:auto;
+            }
+
+        }
+        span{
+            font-family:'Inter', sans-serif;
+        }
+        input{
+            width: 20vw;
+            padding-left: 1vmax;
+            height: 4vh;
+            border: none;
+            border-bottom: 1px solid rgb(160, 159, 159);
+            outline: none;
+            margin: 10px;
+            @include mobile{
+                width: 50vw;
+
+            }
+        }
+        .logo{
+            font-weight: 2rem;
+        }
+        #files{
+            width: 1vw;
+        }
+        button{
+            width: 15vw;
+            padding: 1.2vh;
+            margin: 2vmax 4vmax;
+            border: none;
+            background-color:rgb(52, 163, 248); 
+            border-radius: 5px;
+            color: white;
+            @include mobile{
+                width: 40vw;
+            
+            }
+            cursor: pointer;
+            font-family:'Lexend Deca', sans-serif;
+            transition-duration: .2s;
+            &:hover{
+                transform: scale(1.1);
+                background-color:rgb(0, 119, 210);
+            }
+        }
+        label{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 20px;
+            transition-duration: .8s;
+            cursor: pointer;
+            >img{
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+.home{
+    background-color: rgb(97, 185, 253);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    >.container{
+        display: flex;
+        height: 80%;
+        width: 70%;
+        border-radius: 10px;
+        overflow: hidden;
+        @include mobile {
+            display: flex;
+            width: 95%;
+            height: 85%;
+           }
+        .sidebar{
+            flex: 1;
+            background-color:  rgb(2, 70, 121);
+            >.navbar{
+                position:sticky;
+                display: flex;
+                top: 0;
+                height: 50px;
+                padding: 10px;
+                justify-content: space-between;
+                background-color: rgb(0, 61, 107);
+                color: white;
+                align-items: center;
+                z-index: 9999;
+                @include mobile{
+                    display: flex;
+                    justify-content:space-around;
+                }
+                .logo{
+                    font-weight: bold;
+                    @include tablet {
+                        display: none;
+                      }
+                }
+                .user{
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    @include mobile{
+                        display: flex;
+                        width: 100%;
+                    }
+                    >img{
+                        background-color: white;
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        border: none;
+                    }
+                    .bttn{
+                        @include mobile{
+                            flex: 2;
+                            width: 20%;
+                            display:flex;
+                            justify-content:flex-end;
+                            align-items: flex-end;
+                        }
+                        cursor: pointer;
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                        
+                    }
+                    
+                    }
+
+            }
+            .search{
+                border-bottom: 1px solid rgb(141, 200, 245);
+                border-radius: 5px;
+                >.searchform 
+                    >input{
+                        padding: 10px;
+                        background-color: transparent;
+                        color:rgb(141, 200, 245);
+                        border: none;
+                        outline: none;
+                }
+                >.userchat{
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 10px;
+                    &:hover{
+                        background-color:rgb(4, 62, 104);
+                    }
+                    >img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                    }
+                    >.userinfo{
+                        color: rgb(207, 232, 251);
+                        
+                    }
+                    
+                }
+            
+
+            }
+            overflow-y: scroll;
+            &::-webkit-scrollbar{display: none;}
+            .chatbox{
+                
+                margin-bottom: 10px;
+                >.userchat{
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 10px;
+                    &:hover{
+                        background-color:rgb(4, 62, 104);
+                    }
+                    >img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                    }
+                    >.userinfo{
+                        color: rgb(207, 232, 251);
+                        >span{font-weight: bold;}
+                        p{
+                            font-size: smaller;
+                        }   
+                    }   
+                }
+            }            
+        }
+        .chats{
+            flex: 2;
+            @include mobile{
+                display: none;
+                width: 100vw;
+            }
+            .chatinfo{
+                display: flex;
+                align-items: center;
+                height: 50px;
+                padding: 10px;
+                background-color:rgb(31, 106, 163);
+                >.left{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    flex: 1;
+                    >.backArrow{
+                        display: none;
+                        @include mobile{
+                            display: block;
+                            margin-right: 10px;
+                            cursor: pointer;
+                            &:hover{
+                                transform: scale(1.3);
+                            }
+                        }
+                    }
+                    >img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                    }
+                    >span{
+                        color:rgb(207, 232, 251);
+                        font-weight: bolder;
+                    }
+                }
+                >.right{
+                    display: flex;
+                    gap: 20px;
+                    padding: 20px;
+                    align-items: center;
+                }
+            }
+            .messages{
+                background-color:rgb(204, 227, 247);
+                height: calc(100% - 160px);
+                padding: 10px;
+                overflow-y: auto;
+                &::-webkit-scrollbar{display: none;}
+                .message{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    .messagestatus{
+                        display: flex;
+                        flex-direction: column;
+                        margin: 10px;
+                        font-size: 10px;
+                        color: rgb(75, 75, 75);
+                        img{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .messagecontent{
+                        display: flex;
+                        max-width: 80%;
+                        flex-direction: column;
+                        >p{
+                            background-color: white;
+                            padding: 10px 20px;
+                            font-weight:400;
+                            border-radius:0px 8px 8px 8px;
+                            max-width: max-content;
+                            margin: 5px;
+                            box-shadow:5px 5px 5px rgb(149, 187, 220);
+                        }
+                        >a img{
+                            width: 50%;
+                            border-radius: 5px;
+                            box-shadow:5px 5px 5px rgb(149, 187, 220);
+                            margin: 5px;
+                        }
+                    }
+                    &.owner{
+                        flex-direction: row-reverse;
+                        .messagecontent{
+                            align-items: flex-end;
+                            p{
+                                background-color:rgb(31, 106, 163);
+                                border-radius: 7px 0px 7px 7px;
+                                color:white;
+                                max-width: max-content;
+                                margin: 5px;
+                                box-shadow:5px 5px 5px rgb(149, 187, 220);
+                            }
+                            >a{
+                                display: flex;
+                                align-items: flex-end;
+                                justify-content:right;
+                                margin: 5px;
+                                img{
+                                width: 50%;
+                                border-radius: 5px;
+                                box-shadow:5px 5px 5px rgb(149, 187, 220);
+                                }
+                            }
+                        }
+                        
+                    }
+                    }
+                    
+                }
+            .input{
+                background-color: white;
+                height: 70px;
+                display: flex;
+
+                input{
+                    width: 75%;
+                    border: none;
+                    padding: 20px;
+                    outline: none;
+                }
+                .send{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    label{
+                        flex: 1;
+                        cursor: pointer;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                    >button{
+                        background-color:rgb(0, 61, 107); ;
+                        margin: 5px;
+                        padding: 10px;
+                        border: none;
+                        border-radius: 6px;
+                        flex: 2;
+                        color:rgb(238, 241, 243);
+                        cursor: pointer;
+                        transition-duration:2;
+                        font-weight: bolder;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                    
+
+                }
+
+            }
+        }
+            
+
+        }
+    }
